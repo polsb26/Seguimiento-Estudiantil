@@ -3,9 +3,61 @@
 @tailwind utilities;
 
 :root {
- --green: #1A5D1A;  
+  --green: #1A5D1A;
+  --oscure-green: #546E51;
+  --white: #DDF2FD;
+  --color--white: rgba(231, 234, 241, 1);
+  --nav-color: #87B77B;
+
 }
 
-.text-color-green{
+.text-color-green {
   color: var(--green);
+
 }
+
+.text-color-white {
+  color: var(--white);
+}
+
+.text-color-oscure-green {
+  color: var(--oscure-green);
+}
+
+.bg-button-color-green {
+  background-color: var(--green);
+}
+
+.nav-color-bg {
+  background-color: var(--nav-color);
+  height: 95px;
+}
+
+.manage-bg-color {
+  background-color: var(--color--white);
+}
+
+.card-size {
+  width: 353px;
+  ;
+  height: 358px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #8CB37E;
+  border-radius: 20px;
+  background-color: white;
+
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--nav-color);
+  /* ajusta el color de fondo según sea necesario */
+  padding: 10px;
+  /* ajusta el relleno según sea necesario */
+}
+
