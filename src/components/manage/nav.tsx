@@ -6,7 +6,7 @@ import { PiUserCircleFill } from "react-icons/pi"
 const Navbar = () => {
     return (
       <nav>
-        <div className="nav-container ">
+        <div className="nav-container">
           <div className="">
             <Image
               src={logoU}
@@ -15,7 +15,7 @@ const Navbar = () => {
               height={74}
             />
           </div>
-          <div className="text-xl italic text-color-oscure-green font-semibold">
+          <div className="text-xl italic color-oscure-green font-semibold">
             BIENVENIDO AL SEGUIMIENTO DE ESTUDIANTES DE LA FISI
           </div>
           <div className="">

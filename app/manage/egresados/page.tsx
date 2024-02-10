@@ -1,10 +1,16 @@
-import Nav from "@/src/components/login/nav"
+import Nav from "@/src/components/manage/nav"
+import Profile from "@/src/components/profile/profile"
+import Container from "@/src/components/container/container"
 
-export default function Egresados(){
+export default function Egresados() {
     return (
         <>
-        <Nav/>
+            <Nav />
+            <Container>
+
+            </Container>
+
         </>
     )
-    
+
 }
