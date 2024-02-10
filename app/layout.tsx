@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body 
       className='flex flex-col h-screen manage-bg-color'>{children}</body>
     </html>
