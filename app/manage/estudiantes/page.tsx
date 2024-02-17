@@ -5,9 +5,10 @@ export default function Estudiantes() {
   return (
     <>
       <Nav />
-      <Container>
-        
-      </Container>
+      <div className="mx-5 my-4 h-full">
+        <Container />
+      </div>
+
     </>
   )
 

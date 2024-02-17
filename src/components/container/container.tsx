@@ -1,8 +1,8 @@
 
 export default function Container() {
     return (
-        <div className="bg-white mx-5">
-            Hola
+        <div className="bg-white h-full rounded-xl shadow-lg px-1">
+
         </div>
     )
 }
