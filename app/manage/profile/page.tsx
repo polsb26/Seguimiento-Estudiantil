@@ -1,23 +1,19 @@
-import Navbar from "@/src/components/manage/nav"
-import ProfileContainer from "@/src/components/profile/profile"
-import Container from "@/src/components/container/container"
 
+import Nav from "@/src/components/manage/nav"
+import ProfileContainer from "@/src/components/profile/profile"
 
 export default function Profile() {
 
     return (
         <>
-            <Navbar />
-            <div className="flex justify-start ml-9 h-full my-5">
-                <div className="w-96 ">
-                    <ProfileContainer />
-                   
-                </div>
-                <div className="mx-10 w-full">
-                    <Container/>
-                </div>
-            </div>
+            <Nav />
+            <div className="flex justify-start h-full my-5 mx-5">
+            <ProfileContainer />
+            <div className="bg-white rounded-xl shadow-lg px-1 w-full ml-5">
 
+            </div>  
+            </div>
+          
         </>
     )
 }

@@ -5,10 +5,12 @@ import logoU from "@/app/assets/img/logos/logoU.png";
 import ButtonLogin from "@/src/components/login/button";
 import { CiUser } from "react-icons/ci";
 import { RiLockPasswordLine } from "react-icons/ri";
+import Nav from "@/src/components/manage/nav"
 
 export default function Login() {
   return (
     <>
+
       <div className={style.container_login}>
         <div
           style={{

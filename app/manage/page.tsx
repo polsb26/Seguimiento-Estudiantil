@@ -1,16 +1,15 @@
 "use client";
-import Nav from "@/src/components/manage/nav";
 import Image from "next/image";
 import ESTUDIANTES from "@/app/assets/img/pictures/ESTUDIANTES.png";
 import EGRESADOS from "@/app/assets/img/pictures/EGRESADOS.png";
 import { useRouter } from "next/navigation";
+import Nav from "@/src/components/manage/nav"
 
-export default function Index() {
+export default function Manage() {
   const router = useRouter();
   return (
     <>
-      <Nav />
-
+    <Nav/>
       <div className=" text-center font-semibold italic text-6xl color-oscure-green  py-10">
         <h1>ESCOGER TIPO DE ESTUDIANTE</h1>
       </div>
@@ -36,6 +35,7 @@ export default function Index() {
           </div>
         </div>
       </div>
+     
     </>
   );
 }
