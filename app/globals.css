@@ -8,7 +8,8 @@
   --white: #DDF2FD;
   --background-page: rgba(231, 234, 241, 1);
   --nav-color: #87B77B;
-  --boxshadow:1px 4px 14px 0px rgba(0, 0, 0, 0.25)
+  --boxshadow:1px 4px 14px 0px rgba(0, 0, 0, 0.25);
+  --oscure-grey: rgba(200, 207, 217, 1);
 }
 
 /*COLORES DE TEXTO*/
@@ -45,5 +46,10 @@
 /*profile*/
 .bg-button-profile{
   color: var(--background-page);
+}
+
+/*container*/
+.bg-container{
+  background-color: var(--oscure-grey);
 }
 
