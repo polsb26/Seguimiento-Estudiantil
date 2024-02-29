@@ -1,17 +1,17 @@
-import ProfileContainer from "@/src/components/profile/profile"
-
+import DocumentosAcademico from '@/src/components/datos/documentosA'
+import DetallesIngreso from "@/src/components/datos/detallesI"
+import PerfilAcademico from '@/src/components/datos/perfilA'
 export default function Profile() {
 
     return (
         <>
-
-            <div className="flex justify-start h-full my-5 mx-5">
-                <ProfileContainer />
-                <div className="bg-white rounded-xl shadow-lg px-1 w-full ml-5">
-
-                </div>
+            <div className="flex flex-col bg-white h-full shadow-xl rounded-lg gap-3 ">
+                <h2 className="text-center font-semibold items-center">Detallles Academicos</h2>
+                <hr className="h-px mx-4 border-t-0 bg-gradient-to-r from-transparent via-neutral-500 to-neutral-500 dark:from-neutral-500 dark:to-neutral-500" />
+                <DetallesIngreso />  
+                <PerfilAcademico/>
+                <DocumentosAcademico/>   
             </div>
-
         </>
     )
 }

@@ -1,7 +1,10 @@
+import InputHeader from '@/src/components/inputs/inputsearch'
 export default function HeaderEgresados() {
-    return (
+  return (
     <>
-     <ul className="flex justify-around bg-container rounded-t h-10 p-2">
+      <div className="flex flex-col bg-container rounded-t-2xl h-20">
+        <InputHeader/>
+        <ul className="flex justify-around font-bold mt-3 ">
           <li>
             <span>N°</span>
           </li>
@@ -24,6 +27,7 @@ export default function HeaderEgresados() {
             <span>Direccion/Celular</span>
           </li>
         </ul>
+      </div>
     </>
-    )
+  )
 }

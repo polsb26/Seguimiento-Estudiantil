@@ -10,6 +10,8 @@
   --nav-color: #87B77B;
   --boxshadow:1px 4px 14px 0px rgba(0, 0, 0, 0.25);
   --oscure-grey: rgba(200, 207, 217, 1);
+  --light-grey: rgba(242, 245, 247, 1);
+  --orange: rgba(253, 161, 1, 1);
 }
 
 /*COLORES DE TEXTO*/
@@ -53,3 +55,11 @@
   background-color: var(--oscure-grey);
 }
 
+.bg-input{
+  background-color: var(--light-grey);
+}
+
+/*background button listado*/
+.bg-button-list{
+  background-color: var(--orange);
+}

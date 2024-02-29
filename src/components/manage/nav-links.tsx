@@ -1,6 +1,6 @@
 'use client'
 
-import { FaHome,FaUser,FaUserGraduate } from "react-icons/fa";
+import { FaHome,FaUser,FaUserGraduate,FaRegAddressCard } from "react-icons/fa";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
@@ -11,6 +11,7 @@ const links = [
   { name: 'Todos', href: '/manage', icon: FaHome },
   { name: 'estudiantes',href: '/manage/estudiantes', icon:FaUser},
   { name: 'egresados', href: '/manage/egresados', icon:FaUserGraduate },
+  {name:'Agregar Alumnos', href:'/manage/agregar',icon:FaRegAddressCard},
 ];
 
 export default function NavLinks() {
