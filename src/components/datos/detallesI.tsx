@@ -29,9 +29,7 @@ export default function DetallesIngreso() {
                         </tr>
                     </tbody>
                 </table>
-
             </div>
-
         </>
     )
 }

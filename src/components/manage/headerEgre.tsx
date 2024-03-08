@@ -1,4 +1,6 @@
-import InputHeader from '@/src/components/inputs/inputsearch'
+import InputHeader from '@/src/components/inputs/inputsearch';
+import { TiArrowSortedDown,TiArrowSortedUp } from "react-icons/ti";
+import { TbArrowsMoveVertical } from "react-icons/tb";
 export default function HeaderEgresados() {
   return (
     <>
@@ -8,8 +10,11 @@ export default function HeaderEgresados() {
           <li>
             <span>N°</span>
           </li>
-          <li>
+          <li className='flex'>
             <span>Nombre/DNI</span>
+            <div className=''>
+            <TbArrowsMoveVertical size={25}/>
+            </div>
           </li>
           <li>
             <span>Codigo universitario</span>
@@ -17,8 +22,11 @@ export default function HeaderEgresados() {
           <li>
             <span>Fecha de Egreso</span>
           </li>
-          <li>
+          <li className='flex'>
             <span>Semestre de Egreso</span>
+            <div className=''>
+            <TbArrowsMoveVertical size={25}/>
+            </div>
           </li>
           <li>
             <span>Correo</span>

@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import loginImg from "@/app/assets/img/bg/login_img.webp";
 import style from "@/src/styles/style.module.css";
@@ -5,9 +6,32 @@ import logoU from "@/app/assets/img/logos/logoU.png";
 import ButtonLogin from "@/src/components/login/button";
 import { CiUser } from "react-icons/ci";
 import { RiLockPasswordLine } from "react-icons/ri";
-import Nav from "@/src/components/manage/nav"
+import { useState } from "react";
+import axios from "axios";
+import { useRouter } from "next/navigation";
+
 
 export default function Login() {
+  const [credentials, setCredentials] = useState({
+    usuario: '',
+    password: '',
+  });
+  const router = useRouter()
+  const handleChange = (e) => {
+    setCredentials({
+      ...credentials,
+      [e.target.name]: e.target.value
+    });
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    console.log(credentials);
+    const response = await axios.post('/api/auth', credentials)
+    if (response.status === 200) {
+      localStorage.setItem('token', response.data.token)
+      router.push('/manage')
+    }
+  };
   return (
     <>
 
@@ -36,28 +60,34 @@ export default function Login() {
             <p className="text-center font-thin italic text-gray-500">
               Sistema de seguimiento al estudiante
             </p>
-            <div className="color-green flex flex-col gap-5">
-              <div className="flex border-b-2 border-b-lime-700 py-2 pl-2">
-                <CiUser size={24} />
-                <input
-                  className="border-none pl-3 font-bold outline-none"
-                  type="user"
-                  placeholder="Usuario"
-                  name="usuario"
-                  id="user"
-                />
+            <form onSubmit={handleSubmit}>
+              <div className="color-green flex flex-col gap-5">
+                <div className="flex border-b-2 border-b-lime-700 py-2 pl-2">
+                  <CiUser size={24} />
+                  <input
+                    className="border-none pl-3 font-bold outline-none"
+                    type="user"
+                    placeholder="Usuario"
+                    name="usuario"
+                    id="user"
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="flex border-b-2 border-b-lime-700 py-2 pl-2">
+                  <RiLockPasswordLine size={24} />
+                  <input
+                    className="border-none pl-3 font-bold outline-none"
+                    type="password"
+                    placeholder="password"
+                    name="password"
+                    id="password"
+                    onChange={handleChange}
+                  />
+                </div>
+                <button>login</button>
               </div>
-              <div className="flex border-b-2 border-b-lime-700 py-2 pl-2">
-                <RiLockPasswordLine size={24} />
-                <input
-                  className="border-none pl-3 font-bold outline-none"
-                  type="password"
-                  placeholder="Contraseña"
-                  name="contraseña"
-                  id="pass"
-                />
-              </div>
-            </div>
+            </form>
+
             <div className="flex flex-col px-10 py-4">
               <ButtonLogin />
             </div>

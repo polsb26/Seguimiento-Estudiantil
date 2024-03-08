@@ -12,17 +12,27 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
-model datosAlumno{
-  id Int @id @default(autoincrement())
-  DNI Int
-  estado_Civil String
-  sexo String
+model datos_alumno{
+  alumno_id Int @id @default(autoincrement())
+  nombres String @db.VarChar(50)
+  apellidos String @db.VarChar(50)
+  dni String @db.Char(8)
+  estado_civil Int 
+  sexo Int
   edad Int
-  fecha_Nacimiento DateTime @db.Date
+  fecha_nacimiento DateTime
+  lugar_nacimiento String
   correo String
-  celular String
-  direccion String
-  departamento String
-  provincia String
-  distrito String
+  celular String @db.VarChar(12)
+  direccion String @db.VarChar(150)
+  departamento String @db.VarChar(150)
+  provincia String @db.VarChar(150)
+  distrito String @db.VarChar(150)
 }
+
+model usuarios{
+  usuario_id Int @id @default(autoincrement())
+  usuario String @db.VarChar(50)
+  contrasena String @db.Text
+}
+
