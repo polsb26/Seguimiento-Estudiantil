@@ -36,3 +36,38 @@ model usuarios{
   contrasena String @db.Text
 }
 
+model datos_extra_alumno{
+datos_extra_alumno_id Int @id @default(autoincrement())
+alumno_id Int
+discapacidad String @db.VarChar(150)
+detalles_discapacidad String @db.VarChar(150)
+nombre_etnia String @db.VarChar(150)
+}
+
+model detalles_ingreso{
+  detalles_ingreso_id Int @id @default(autoincrement())
+  alumno_id Int
+  modalidad_ingreso String @db.VarChar(150)
+  facultad String @db.VarChar(150)
+  escuela_profesional String @db.VarChar(150)
+  tipo_ingreso String @db.VarChar(150)
+  periodo_ingreso String @db.VarChar(150)
+  periodo_matricula String @db.VarChar(150)
+  primer_periodo_de_matricula String @db.VarChar(150)
+}
+
+model estado_estudiante{
+  estado_estudiante_id Int @id @default(autoincrement())
+  tipo_estado String @db.VarChar(150)
+
+}
+model perfil_academico{
+  perfil_academico_id Int @id @default(autoincrement())
+  alumno_id Int
+  codigo_universitario String @db.VarChar(150)
+  semestre_ciclo Int
+  nivel String @db.VarChar(150)
+  estado_id Int 
+}
+
+

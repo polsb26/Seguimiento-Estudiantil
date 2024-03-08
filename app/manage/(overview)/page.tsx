@@ -5,8 +5,6 @@ export default function Page() {
         <div className="flex flex-col bg-white h-full shadow-xl rounded-3xl">
             <HeaderTodos/>
             <div className="flex-grow">
-
-
             </div>
             <Footer />
         </div>
