@@ -2,10 +2,10 @@
 import { PiUserCircleFill } from "react-icons/pi"
 import ButtonBack from "./buttonback"
 
-export default function ProfileContainer() {
+export default function ProfileContainer({alumno}) {
     return (
         <>
-            <div className="bg-white h-full md:px-2 rounded-xl shadow-lg mx-4 " >
+            <div className="bg-white md:px-2 rounded-xl shadow-lg mx-4 " >
 
                 <div className="text-center ">
                     <ButtonBack />
@@ -13,10 +13,10 @@ export default function ProfileContainer() {
                         <PiUserCircleFill size={150} color="rgba(231, 234, 241, 1)" className="mx-20 " />
                     </div>
                     <div className="">
-                        Nombre del usuario
+                        {alumno.Nombre} {alumno.Apellido}   
                     </div>
                     <div className="font-bold text-sm my-4">
-                        ESTADO ACTUAL:
+                        ESTADO ACTUAL: {alumno.nombre_estado}
                     </div>
                     <hr className="h-px mx-4 border-t-0 bg-gradient-to-r from-transparent via-neutral-500 to-neutral-500 dark:from-neutral-500 dark:to-neutral-500" />
                 </div>
@@ -33,48 +33,48 @@ export default function ProfileContainer() {
                         <tbody className="">
                             <tr>
                                 <td className="font-bold">DNI</td>
-                                <td className="">:</td>
-                                <td></td>
+                                <td className="">:</td>                            
+                                <td>{alumno.DNI}</td>
                             </tr>
                             <tr>
                                 <td className="w-1/2 font-bold">Estado Civil</td>
                                 <td className="">:</td>
-                                <td></td>
+                                <td>{alumno.estado_civil}</td>
                             </tr>
                             <tr>
                                 <td className="w-1/2 font-bold">Sexo</td>
                                 <td className="">:</td>
-                                <td></td>
+                                <td>{alumno.sexo}</td>
                             </tr>
                             <tr>
                                 <td className="w-1/2 font-bold">Edad</td>
                                 <td className="">:</td>
-                                <td></td>
+                                <td>{alumno.edad}</td>
                             </tr>
                             <tr>
                                 <td className="w-1/2 font-bold">Fecha de Nacimiento</td>
                                 <td className="">:</td>
-                                <td></td>
+                                <td>{alumno.fecha_nacimiento}</td>
                             </tr>
                             <tr>
                                 <td className="w-1/2 font-bold">Correo</td>
                                 <td className="">:</td>
-                                <td></td>
+                                <td>{alumno.correo}</td>
                             </tr>
                             <tr>
                                 <td className="w-1/2 font-bold">Celular</td>
                                 <td className="">:</td>
-                                <td></td>
+                                <td>{alumno.celular}</td>
                             </tr>
                             <tr>
                                 <td className="w-1/2 font-bold">Dirección</td>
                                 <td className="">:</td>
-                                <td></td>
+                                <td>{alumno.direccion}</td>
                             </tr>
                             <tr>
                                 <td className="w-1/2 font-bold">Dep/Prov/Dist</td>
                                 <td className="">:</td>
-                                <td></td>
+                                <td>{alumno.departamento}/{alumno.provincia}/{alumno.distrito}</td>
                             </tr>
                         </tbody>
                     </table>

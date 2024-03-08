@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/api/estudiantes/route.js", "app/api/estudiantes/[id]/route.js", "src/components/manage/headerTodos.tsx", "src/components/profile/buttonVermas.jsx", "src/components/datos/detallesI.tsx", "src/components/profile/profile.tsx"],
   "exclude": ["node_modules"]
 }

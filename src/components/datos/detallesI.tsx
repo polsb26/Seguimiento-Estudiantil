@@ -1,6 +1,6 @@
 
 
-export default function DetallesIngreso() {
+export default function DetallesIngreso({alumno}) {
     return (
         <>
             <div className="mx-4">
@@ -10,22 +10,22 @@ export default function DetallesIngreso() {
                         <tr>
                             <td className="">Modalidad de Ingreso</td>
                             <td className="">:</td>
-                            <td></td>
+                            <td>{alumno.modalidad_ingreso}</td>
                         </tr>
                         <tr>
                             <td className="">Tipo de Ingreso</td>
                             <td className="">:</td>
-                            <td></td>
+                            <td>{alumno.tipo_ingreso}</td>
                         </tr>
                         <tr>
                             <td className="">Periodo de Ingreso</td>
-                            <td className="">:</td>
-                            <td></td>
+                            <td className="">: </td>
+                            <td>{alumno.periodo_ingreso}</td>
                         </tr>
                         <tr>
                             <td className="">Periodo de Matricula</td>
                             <td className="">:</td>
-                            <td></td>
+                            <td>{alumno.periodo_matricula}</td>
                         </tr>
                     </tbody>
                 </table>
